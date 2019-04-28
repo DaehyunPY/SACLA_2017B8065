@@ -18,16 +18,17 @@ RUN curl -o anaconda.sh https://repo.anaconda.com/archive/Anaconda3-5.3.0-Linux-
 
 # Build Pipenv project
 WORKDIR /app
-ENV PIPENV_VENV_IN_PROJECT=true \
-    PATH=/app/.venv/bin:$PATH \
-    PYSPARK_PYTHON=/app/.venv/bin/python
-COPY Pipfile /app/
-RUN pip install pipenv \
-    && pipenv --python /opt/anaconda/bin/python --site-packages \
-    && pipenv install --dev \
-    && python -m jupyter labextension install \
-        @jupyterlab/toc \
-        @jupyter-widgets/jupyterlab-manager \
+ENV PYSPARK_PYTHON=/opt/anaconda/bin/python
+RUN pip install \
+        altair \
+        dltools">=201901.1" \
+        importlib_resources \
+        lmfit \
+        numpy">=1.16" \
+        pymongo \
+        pyspark \
+        tornado"<6" \
+        xarray \
     && rm -fr /root/.cache
 
 # Change permissions for multi-user
@@ -36,5 +37,4 @@ ENV HOME=/app \
 RUN chmod a+wx /app
 
 EXPOSE 4040 8888
-VOLUME [ "/app/.jupyter", "/app/.ivy2" ]
 CMD [ "python" ]
