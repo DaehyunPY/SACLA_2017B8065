@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+altair = "*"
+dltools = "*"
+importlib_resources = "*"
+lmfit = "*"
+pymongo = "*"
+pyspark = "*"
+tornado = "<6"
+xarray = "*"
+
+[requires]
+python_version = "3.7"
