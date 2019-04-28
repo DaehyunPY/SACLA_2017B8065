@@ -1,0 +1,266 @@
+momentum_analyzer:
+  th: 0  # A calibration factor. Default: 0.
+  dx: 1  # A calibration factor. Default: 1.
+  dy: 1  # A calibration factor. Default: 1.
+  models:  # SACLA momentum models.
+    H1p:
+      # Mass of the model particle. This parameter will be used to
+      # calculate kinetic energy from three-dimensional momentum...
+      #   (px, py, pz) -> (px**2 + py**2 + pz**2) / 2 / mass.
+      # This program does not consider units. You may want to
+      # convert the unit of kinetic energy implictly, here.
+      mass: 67.521816  # = 1.00794 * 1822.888486192 / 27.21138602
+      # Coefficients of momentum model in the z direction.
+      pz_coeffs:
+        - 2579.93
+        - -15.249
+        - 0.00227938
+        - 8.85389e-005
+        - -9.99483e-008
+        - -0.00409724
+        - 2.11001e-007
+      # Coefficients of momentum model in the r direction.
+      pr_coeffs:
+        - 1.8386
+        - -0.000451346
+        - 4.27199e-008
+        - 1.41411e-012
+        - 1.57056e-008
+        - -9.25972e-014    
+      fr: 1000  # Lower limit of flight time. Default: 0.1594 - 655
+      to: 1080  # Upper limit of flight time. Default: .inf.2118 - 655
+      x0: 0  # A calibration factor. Default: 0.
+      y0: 0  # A calibration factor. Default: 0.
+      t0: 627
+    C2p:
+      # Mass of the model particle. This parameter will be used to
+      # calculate kinetic energy from three-dimensional momentum...
+      #   (px, py, pz) -> (px**2 + py**2 + pz**2) / 2 / mass.
+      # This program does not consider units. You may want to
+      # convert the unit of kinetic energy implictly, here.
+      mass: 803.8791617  # = 12 * 1822.888486192 / 27.21138602
+      # Coefficients of momentum model in the z direction.
+      pz_coeffs:
+        - 12139.6
+        - -29.4158
+        - 0.0014018
+        - 2.92392e-005
+        - -1.34214e-008
+        - -0.0200191
+        - 8.90592e-007
+      # Coefficients of momentum model in the r direction.
+      pr_coeffs:
+        - 9.42137
+        - -0.00135739
+        - 8.42412e-008
+        - 5.33827e-013
+        - 3.26166e-009
+        - -3.23427e-015     
+      fr: 1580  # Lower limit of flight time. Default: 0.1594 - 655
+      to: 1700  # Upper limit of flight time. Default: .inf.1698 - 655
+      x0: 0  # A calibration factor. Default: 0.
+      y0: 0  # A calibration factor. Default: 0.
+      t0: 630
+    C1p:
+      # Mass of the model particle. This parameter will be used to
+      # calculate kinetic energy from three-dimensional momentum...
+      #   (px, py, pz) -> (px**2 + py**2 + pz**2) / 2 / mass.
+      # This program does not consider units. You may want to
+      # convert the unit of kinetic energy implictly, here.
+      mass: 803.8791617  # = 12 * 1822.888486192 / 27.21138602
+      # Coefficients of momentum model in the z direction.
+      pz_coeffs:
+        - 9507.03
+        - -16.1439
+        - 0.000688558
+        - 7.88022e-006
+        - -2.59552e-009
+        - -0.0139515
+        - 7.47463e-007
+      # Coefficients of momentum model in the r direction.
+      pr_coeffs:
+        - 5.7161
+        - -3.51862e-007
+        - 3.57452e-008
+        - 6.38441e-012
+        - 2.48121e-009
+        - -1.2303e-015     
+      fr: 1950  # Lower limit of flight time. Default: 0.2009 - 655
+      to: 2150  # Upper limit of flight time. Default: .inf.2118 - 655
+      x0: -0.2  # A calibration factor. Default: 0.
+      y0: 1.2 # A calibration factor. Default: 0.
+      t0: 634
+    I5p:
+      # Mass of the model particle. This parameter will be used to
+      # calculate kinetic energy from three-dimensional momentum...
+      #   (px, py, pz) -> (px**2 + py**2 + pz**2) / 2 / mass.
+      # This program does not consider units. You may want to
+      # convert the unit of kinetic energy implictly, here.
+      mass: 8501.0204451  # = 12 * 1822.888486192 / 27.21138602
+      # Coefficients of momentum model in the z direction.
+      pz_coeffs:
+        - 60048
+        - -70.9551
+        - 0.00135966
+        - 1.68745e-05
+        - -3.74245e-09
+        - -0.103315
+        - 4.5638e-06
+      # Coefficients of momentum model in the r direction.
+      pr_coeffs:
+        - 49.2891
+        - -0.00380945
+        - 2.03341e-07
+        - 1.36068e-12
+        - 1.58338e-09
+        - -3.71678e-16
+      fr: 2630  # Lower limit of flight time. Default: 0. 2896 - 655
+      to: 2780  # Upper limit of flight time. Default: .inf. 3026 - 655
+      x0: -1  # A calibration factor. Default: 0.
+      y0: 1  # A calibration factor. Default: 0. 
+      t0: 630 
+    I4p:
+      # Mass of the model particle. This parameter will be used to
+      # calculate kinetic energy from three-dimensional momentum...
+      #   (px, py, pz) -> (px**2 + py**2 + pz**2) / 2 / mass.
+      # This program does not consider units. You may want to
+      # convert the unit of kinetic energy implictly, here.
+      mass: 8501.0204451  # = 12 * 1822.888486192 / 27.21138602
+      # Coefficients of momentum model in the z direction.
+      pz_coeffs:
+        - 50232.3
+        - -50.6025
+        - -0.00311872
+        - 1.20062e-05
+        - -2.27561e-09
+        - -0.0921862
+        - 3.82231e-06
+      # Coefficients of momentum model in the r direction.
+      pr_coeffs:
+        - 44.0753
+        - -0.00304443
+        - 1.63804e-07
+        - 8.09309e-14
+        - 1.00013e-09
+        - -1.87702e-16
+      fr: 2850  # Lower limit of flight time. Default: 0. 2896 - 655
+      to: 3050  # Upper limit of flight time. Default: .inf. 3026 - 655
+      x0: 0.3  # A calibration factor. Default: 0.
+      y0: 1.5  # A calibration factor. Default: 0. 
+      t0: 645
+    I3p:
+      # Mass of the model particle. This parameter will be used to
+      # calculate kinetic energy from three-dimensional momentum...
+      #   (px, py, pz) -> (px**2 + py**2 + pz**2) / 2 / mass.
+      # This program does not consider units. You may want to
+      # convert the unit of kinetic energy implictly, here.
+      mass: 8501.0204451  # = 12 * 1822.888486192 / 27.21138602
+      # Coefficients of momentum model in the z direction.
+      pz_coeffs:
+        - -8426.55
+        - -1.3816
+        - 0.000631995
+        - 2.8945e-007
+        - 4.01557e-011
+        - -0.0810327
+        - 3.4268e-006
+      # Coefficients of momentum model in the r direction.
+      pr_coeffs:
+        - 40.5494
+        - -0.00319139
+        - 1.03357e-007
+        - 8.36393e-012
+        - 1.41103e-010
+        - -2.00299e-017
+      fr: 3200  # Lower limit of flight time. Default: 0.
+      to: 3400  # Upper limit of flight time. Default: .inf.
+      x0: 0.1  # A calibration factor. Default: 0.
+      y0: 1.5  # A calibration factor. Default: 0. 
+      t0: 639 
+    I2p:
+      # Mass of the model particle. This parameter will be used to
+      # calculate kinetic energy from three-dimensional momentum...
+      #   (px, py, pz) -> (px**2 + py**2 + pz**2) / 2 / mass.
+      # This program does not consider units. You may want to
+      # convert the unit of kinetic energy implictly, here.
+      mass: 8501.0204451  # = 12 * 1822.888486192 / 27.21138602
+      # Coefficients of momentum model in the z direction.
+      pz_coeffs:
+        - 40184.2
+        - -29.9173
+        - 0.000453822
+        - 2.81e-006
+        - -3.98037e-010
+        - -0.0651582
+        - 3.60176e-006
+      # Coefficients of momentum model in the r direction.
+      pr_coeffs:
+        - 28.1502
+        - -0.000583398
+        - 7.7779e-008
+        - 7.28141e-012
+        - 6.32684e-010
+        - -5.92671e-017
+      fr: 3800  # Lower limit of flight time. Default: 0. 3853 - 655
+      to: 4020  # Upper limit of flight time. Default: .inf. 3990 - 655
+      x0: -0.4  # A calibration factor. Default: 0.
+      y0: 1.4  # A calibration factor. Default: 0. 
+      t0: 643
+    I1p:
+      # Mass of the model particle. This parameter will be used to
+      # calculate kinetic energy from three-dimensional momentum...
+      #   (px, py, pz) -> (px**2 + py**2 + pz**2) / 2 / mass.
+      # This program does not consider units. You may want to
+      # convert the unit of kinetic energy implictly, here.
+      mass: 8501.0204451   # = 126.9 * 1822.888486192 / 27.21138602
+      # Coefficients of momentum model in the z direction.
+      pz_coeffs:
+        - 26824.7
+        - -14.2786
+        - 0.000193147
+        - 6.57577e-007
+        - -6.55786e-011
+        - -0.0462857
+        - 1.99704e-006
+      # Coefficients of momentum model in the r direction.
+      pr_coeffs:
+        - 22.5668
+        - -0.00087779
+        - 4.24205e-008
+        - -2.76085e-012
+        - 4.22634e-011
+        - -1.98336e-018
+      fr: 5150  # Lower limit of flight time. Default: 0. 5212 - 655  
+      to: 5420  # Upper limit of flight time. Default: .inf. 5367 - 655
+      x0: 0.2  # A calibration factor. Default: 0.
+      y0: 1.5  # A calibration factor. Default: 0.  
+      t0: 652
+    CHHI1p:
+      # Mass of the model particle. This parameter will be used to
+      # calculate kinetic energy from three-dimensional momentum...
+      #   (px, py, pz) -> (px**2 + py**2 + pz**2) / 2 / mass.
+      # This program does not consider units. You may want to
+      # convert the unit of kinetic energy implictly, here.
+      mass: 944.088897  # = 14.093 * 1822.888486192 / 27.21138602
+      # Coefficients of momentum model in the z direction.
+      pz_coeffs:
+        - -3910.74
+        - -1.05137
+        - 0.000173574
+        - 3.76851e-08
+        - 9.11998e-13
+        - -0.0496398
+        - 2.98657e-06
+      # Coefficients of momentum model in the r direction.
+      pr_coeffs:
+        - 24.831
+        - -0.0010985
+        - 4.12962e-08
+        - -1.10827e-11
+        - 1.09377e-11
+        - -4.6316e-19
+      fr: 5430  # Lower limit of flight time. Default: 0. 2131 - 655
+      to: 5650  # Upper limit of flight time. Default: .inf. 2220 - 655
+      x0: 0  # A calibration factor. Default: 0.
+      y0: 1.4  # A calibration factor. Default: 0.
+      t0: 652
