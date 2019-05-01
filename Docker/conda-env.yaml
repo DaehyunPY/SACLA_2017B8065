@@ -1,0 +1,17 @@
+channels:
+  - defaults
+dependencies:
+  - autopep8
+  - netcdf4
+  - numpy>=1.16
+  - pyarrow
+  - pymongo
+  - pyspark
+  - python==3.7.*
+  - tornado<6
+  - xarray
+  - pip:
+    - altair
+    - altair-data-server
+    - dltools>=201901.1
+    - lmfit
