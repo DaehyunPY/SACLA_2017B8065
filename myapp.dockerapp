@@ -1,0 +1,34 @@
+version: "20190502"
+name: sacla-2017b8065
+description: A container to analyze data of SACLA 2017B8065
+maintainers:
+  - name: Daehyun You
+    email: daehyun@dc.tohoku.ac.jp
+
+---
+version: "3.7"
+services:
+  jupyter:
+    image: daehyunpy/sacla-2017b8065:20190502
+    command: bash -c "umask 0002 && python -m jupyter lab --allow-root"
+    ports:
+      - ${port_jupyter}:8888
+    volumes:
+      - ./jupyter_config.json:/etc/jupyter/jupyter_notebook_config.json:ro
+      - ${base_jupyter}/Notebooks:/app/Notebooks
+      - ${base_jupyter}/Data:/app/Notebooks/Data
+      - ${base_jupyter}/Figures:/app/Notebooks/Figures
+  mongodb:
+    image: mongo
+    working_dir: /data
+    ports:
+      - ${port_mongodb}:27017
+    volumes:
+      - ${base_mongodb}/MongoDB:/data/db
+      - ${base_mongodb}/MongoDB Dumps/Current:/data/dump
+
+---
+port_jupyter: 8888
+port_mongodb: 27017
+base_jupyter: .
+base_mongodb: .

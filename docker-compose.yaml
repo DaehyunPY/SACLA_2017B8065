@@ -1,21 +1,5 @@
 version: "3.7"
 services:
-  jupyter:
+  jupyter-build:
     build: ./Docker
     image: daehyunpy/sacla-2017b8065:20190502
-    command: bash -c "umask 0002 && python -m jupyter lab --allow-root"
-    ports
-      - "8888"
-    volumes:
-      - ./jupyter_config.json:/etc/jupyter/jupyter_notebook_config.json:ro
-      - ./Notebooks:/app/Notebooks
-      - ./Data:/app/Notebooks/Data
-      - ./Figures:/app/Notebooks/Figures
-  mongodb:
-    image: mongo
-    working_dir: /data
-    ports:
-      - "27017"
-    volumes:
-      - ./MongoDB:/data/db
-      - ./MongoDB Dumps/Current:/data/dump
