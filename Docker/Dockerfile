@@ -8,6 +8,7 @@ RUN dnf update -y \
     && dnf install -y \
         bzip2 \
         git \
+        java-1.8.0-openjdk \
         texlive \
         which \
     && dnf clean all

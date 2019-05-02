@@ -1,4 +1,4 @@
-FROM daehyunpy/sacla-2017b8065:593b34b2a648
+FROM daehyunpy/sacla-2017b8065:20190502
 LABEL maintainer="Daehyun You <daehyun@dc.tohoku.ac.jp>"
 
 ARG NB_USER=user
