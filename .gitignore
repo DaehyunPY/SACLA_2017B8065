@@ -1,8 +1,11 @@
+__pycache__
 .ipynb_checkpoints
 /.idea
 /.vscode
+/Data/ZD aq*.txt
 /Figures
 /MongoDB*
+/Notebooks/dev
 /Notebooks/Playground.ipynb
 /Reports
 spark-warehouse
