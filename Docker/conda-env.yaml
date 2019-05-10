@@ -13,5 +13,5 @@ dependencies:
   - pip:
     - altair
     - altair-data-server
-    - dltools>=201901.1
+    - dltools>=201905.1
     - lmfit

@@ -13,6 +13,7 @@ RUN dnf update -y \
         which \
     && dnf clean all
 
+# Avoid to use "Add" here to reduce the image size
 RUN curl -o /root/miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-4.3.30-Linux-x86_64.sh \
     && bash /root/miniconda.sh -bp /opt/anaconda \
     && rm /root/miniconda.sh
