@@ -27,8 +27,8 @@ momentum_analyzer:
         - 1.41411e-012
         - 1.57056e-008
         - -9.25972e-014    
-      fr: 1000  # Lower limit of flight time. Default: 0.1594 - 655
-      to: 1080  # Upper limit of flight time. Default: .inf.2118 - 655
+      fr: 1000  # Lower limit of flight time. Default: 0.
+      to: 1080  # Upper limit of flight time. Default: .inf.
       x0: 0  # A calibration factor. Default: 0.
       y0: 0  # A calibration factor. Default: 0.
       t0: 627
@@ -56,8 +56,8 @@ momentum_analyzer:
         - 5.33827e-013
         - 3.26166e-009
         - -3.23427e-015     
-      fr: 1580  # Lower limit of flight time. Default: 0.1594 - 655
-      to: 1700  # Upper limit of flight time. Default: .inf.1698 - 655
+      fr: 1580  # Lower limit of flight time. Default: 0.
+      to: 1700  # Upper limit of flight time. Default: .inf.
       x0: 0  # A calibration factor. Default: 0.
       y0: 0  # A calibration factor. Default: 0.
       t0: 630
@@ -85,11 +85,40 @@ momentum_analyzer:
         - 6.38441e-012
         - 2.48121e-009
         - -1.2303e-015     
-      fr: 1950  # Lower limit of flight time. Default: 0.2009 - 655
-      to: 2150  # Upper limit of flight time. Default: .inf.2118 - 655
+      fr: 1950  # Lower limit of flight time. Default: 0.
+      to: 2150  # Upper limit of flight time. Default: .inf.
       x0: -0.2  # A calibration factor. Default: 0.
       y0: 1.2 # A calibration factor. Default: 0.
       t0: 634
+    I6p:
+      # Mass of the model particle. This parameter will be used to
+      # calculate kinetic energy from three-dimensional momentum...
+      #   (px, py, pz) -> (px**2 + py**2 + pz**2) / 2 / mass.
+      # This program does not consider units. You may want to
+      # convert the unit of kinetic energy implictly, here.
+      mass: 8501.0204451  # = 12 * 1822.888486192 / 27.21138602
+      # Coefficients of momentum model in the z direction.
+      pz_coeffs:
+        - 66021.6
+        - -85.2212
+        - 0.00147134
+        - 2.45527e-05
+        - -5.95699e-09
+        - -0.113242
+        - 5.24378e-06
+      # Coefficients of momentum model in the r direction.
+      pr_coeffs:
+        - 53.7966
+        - -0.00446514
+        - 2.48066e-07
+        - -6.17564e-13
+        - 2.42527e-09
+        - -6.82568e-16
+      fr: 2450  # Lower limit of flight time. Default: 0.
+      to: 2620  # Upper limit of flight time. Default: .inf.
+      x0: -0.3  # A calibration factor. Default: 0.
+      y0: 1  # A calibration factor. Default: 0. 
+      t0: 635
     I5p:
       # Mass of the model particle. This parameter will be used to
       # calculate kinetic energy from three-dimensional momentum...
@@ -114,11 +143,11 @@ momentum_analyzer:
         - 1.36068e-12
         - 1.58338e-09
         - -3.71678e-16
-      fr: 2630  # Lower limit of flight time. Default: 0. 2896 - 655
-      to: 2780  # Upper limit of flight time. Default: .inf. 3026 - 655
+      fr: 2630  # Lower limit of flight time. Default: 0.
+      to: 2790  # Upper limit of flight time. Default: .inf.
       x0: -1  # A calibration factor. Default: 0.
       y0: 1  # A calibration factor. Default: 0. 
-      t0: 630 
+      t0: 635
     I4p:
       # Mass of the model particle. This parameter will be used to
       # calculate kinetic energy from three-dimensional momentum...
@@ -143,11 +172,11 @@ momentum_analyzer:
         - 8.09309e-14
         - 1.00013e-09
         - -1.87702e-16
-      fr: 2850  # Lower limit of flight time. Default: 0. 2896 - 655
-      to: 3050  # Upper limit of flight time. Default: .inf. 3026 - 655
+      fr: 2850  # Lower limit of flight time. Default: 0.
+      to: 3050  # Upper limit of flight time. Default: .inf.
       x0: 0.3  # A calibration factor. Default: 0.
       y0: 1.5  # A calibration factor. Default: 0. 
-      t0: 645
+      t0: 640
     I3p:
       # Mass of the model particle. This parameter will be used to
       # calculate kinetic energy from three-dimensional momentum...
@@ -201,8 +230,8 @@ momentum_analyzer:
         - 7.28141e-012
         - 6.32684e-010
         - -5.92671e-017
-      fr: 3800  # Lower limit of flight time. Default: 0. 3853 - 655
-      to: 4020  # Upper limit of flight time. Default: .inf. 3990 - 655
+      fr: 3800  # Lower limit of flight time. Default: 0.
+      to: 4020  # Upper limit of flight time. Default: .inf.
       x0: -0.4  # A calibration factor. Default: 0.
       y0: 1.4  # A calibration factor. Default: 0. 
       t0: 643
@@ -230,8 +259,8 @@ momentum_analyzer:
         - -2.76085e-012
         - 4.22634e-011
         - -1.98336e-018
-      fr: 5150  # Lower limit of flight time. Default: 0. 5212 - 655  
-      to: 5420  # Upper limit of flight time. Default: .inf. 5367 - 655
+      fr: 5150  # Lower limit of flight time. Default: 0.
+      to: 5420  # Upper limit of flight time. Default: .inf.
       x0: 0.2  # A calibration factor. Default: 0.
       y0: 1.5  # A calibration factor. Default: 0.  
       t0: 652
@@ -259,8 +288,8 @@ momentum_analyzer:
         - -1.10827e-11
         - 1.09377e-11
         - -4.6316e-19
-      fr: 5430  # Lower limit of flight time. Default: 0. 2131 - 655
-      to: 5650  # Upper limit of flight time. Default: .inf. 2220 - 655
+      fr: 5430  # Lower limit of flight time. Default: 0.
+      to: 5650  # Upper limit of flight time. Default: .inf.
       x0: 0  # A calibration factor. Default: 0.
       y0: 1.4  # A calibration factor. Default: 0.
       t0: 652
