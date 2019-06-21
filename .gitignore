@@ -3,8 +3,10 @@ __pycache__
 /.idea
 /.vscode
 /Data/ZD aq*.txt
+/Draft
 /Figures
 /MongoDB*
+/Notebooks/*.json
 /Notebooks/dev
 /Notebooks/Playground.ipynb
 /Reports
