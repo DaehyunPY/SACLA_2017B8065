@@ -9,7 +9,7 @@ maintainers:
 version: "3.7"
 services:
   jupyter:
-    image: daehyunpy/sacla-2017b8065:20190510
+    image: daehyunpy/sacla-2017b8065:20190524
     command: bash -c "umask 0002 && python -m jupyter lab --allow-root"
     ports:
       - ${port_jupyter}:8888

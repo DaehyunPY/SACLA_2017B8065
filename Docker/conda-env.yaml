@@ -8,6 +8,7 @@ dependencies:
   - pymongo
   - pyspark
   - python==3.7.*
+  - selenium
   - tornado<6
   - xarray
   - pip:
@@ -15,3 +16,6 @@ dependencies:
     - altair-data-server
     - dltools>=201905.1
     - lmfit
+
+    - vega
+    - vega_datasets
